@@ -1,0 +1,2 @@
+extenstion of html file is "*.html"
+but can we also use *.htm
