@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms And Input Tags</title>
+</head>
+
+<body>
+    <h1>Forms</h1>
+
+    <!-- type form and press enter to get its boilerplate code -->
+    <form action="backend.php">
+        <label for="name"> Name</label>
+        <div>
+            <input type="text" name="myName" id="name">
+        </div>
+        <!-- <div>
+            Name: <input type="text" name="myName" id = "name">
+        </div> -->
+        <div>
+            Role: <input type="text" name="myRoll">
+        </div>
+        <div>
+            Email: <input type="email" name="myEmail">
+        </div>
+        <div>
+            Date of Birth: <input type="date" name="myDOB">
+        </div>
+        <div>
+            Phone: <input type="number" name="myNumber">
+        </div>
+        <div>
+            <!-- Are you eligigble? <input type="checkbox" name="myEligibility" checked> -->
+            Are you eligigble? <input type="checkbox" name="myEligibility">
+        </div>
+        <div>
+            Gender: Male<input type="radio" name="myGender"> Female<input type="radio" name="myGender"> Others<input
+                type="radio" name="myGender">
+        </div>
+        <div>
+            Write about yourself: <br> <textarea name="myText" cols="60" rows="10"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Submit Now">
+            <input type="reset" value="Reset Form">
+        </div>
+        <div>
+            <label for="car">Car</label>
+            <select name="myCar" id="car">
+                <option value="ind" selected> Indica</option>
+                <!-- <option value="ind">Indica</option> -->
+                <option value="swt">Swift</option>
+            </select>
+        </div>
+    </form>
+    <!--
+        1) it tells that go that web location (on backend) and submit the information
+        2) "input" tag is where user give the input
+    Name before input is displayed before input box
+    3) "div" tag is used for division of different tags.
+    div is block element i.e. it takes whole block
+    while input is inline element.
+    we can also use "br" but it is not recommended, it can be done via CSS
+    4) type "input:email" to get its snippet.
+    we removed "id", will discuss later.
+    Any text can be written in name of email section, it tells backend to specify what is what 
+    5) To submit the form, use 'input:submit' for its boilerplate.
+    any text can be given as its value and that will be shown on button of submit
+    6) 'input:date' to select date, month, year.
+    7) 'input:number' to enter any number
+    here no other alphabet than 'e' is entered (only one time) b/c we use 'e' for writing numbers in power
+    8) 'input:checkbox' for checkbox
+    if we add "checked" at last then that checkbox is by default checked
+    9) 'input:radio' for radio button similar to MCQ
+    here in webpage we are able to select only 1 option as both "name" is same
+    10) 'input:reset' to reset the form or clear the form
+    11) 'textarea' for entering large text values
+    12) 'label' -> if lable is added to a input text,
+    then when we click on its pre word "Name" in this case,
+    particular box associated with it selected automatically
+    id of a input tag and for of label should be same
+    13) 'select' is used for selecting something from given options
+    'option' comes under select to give option for selection
+    write 'selected' for by default selection,
+    if we write selected for more than one options. Then,
+    last option which has 'selected' keyword will be set as default
+    -->
+
+</body>
+
+</html>
