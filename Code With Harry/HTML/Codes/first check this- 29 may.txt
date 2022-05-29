@@ -1,0 +1,5 @@
+uninstall extenstions which are no longer in use(like of asm)
+
+search for extension of html
+
+html entities reference chart pdf download
