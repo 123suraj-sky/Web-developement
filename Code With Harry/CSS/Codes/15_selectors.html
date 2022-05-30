@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+
+    <!-- internal css -->
+    <style>
+        p {
+            color: red;
+            border: 2px solid red;
+        }
+    </style>
+    <!--
+        here p is element selector for selecting paragraph -->
+
+    
+    <!-- below is class selector -->
+    <style>
+        #secondPara {
+            color: green;
+        }
+    </style>
+    <!-- '#' symbol is used for id -->
+
+    <style>
+        .redElement {
+            color: yellow;
+        }
+        .bgBlu{
+            background-color: skyblue;
+        }
+        footer, span{
+            background-color: pink;
+        }
+    /* here footer, span is grounp selector because
+    more than 1 is choosen.
+    
+Here comment format is different because it is for CSS */
+    </style>
+    <!-- '#' symbol is used for id 
+    -->
+</head>
+
+<body>
+    <p>this is a simple paragraph to demostrate <strong> CSS selectors</strong></p>
+    <p id="redElement">this is another simple paragraph to demostrate <strong> CSS selectors</strong></p>
+    <p id="secondPara" class="redElement bgBlu">this is another simple paragraph to demostrate <strong> CSS selectors</strong>
+    </p>
+    <span>this is span</span>
+    <footer>this is footer</footer>
+
+</body>
+
+</html>

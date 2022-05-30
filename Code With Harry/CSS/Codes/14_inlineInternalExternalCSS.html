@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inilne Internal and External CSS</title>
+
+    <link rel="stylesheet" href="14_inlineInternalExternalCSS.css">
+
+    <style>
+    p{
+        color:purple;
+        background-color: rgb(190, 206, 99);
+    }
+    </style>
+</head>
+<body>
+    <h3>Inline CSS</h3>
+    <!-- <p style="color: red; background-color: yellow;">This is CSS tutorial</p> -->
+    <p>This is CSS tutorial</p>
+</body>
+
+<!-- notes
+1) inline CSS
+    -for text color -> "style="color: red"" in any tag
+    we can change color by clicking on the color icon
+    -for background -> "sytle="background-color: yellow""
+
+    -if we already give color in head tag
+    and then modify in any tag of body 
+    then the modified color will be shown because
+    *inline CSS is preferred over internal css
+
+2) whichever line is wriiten later 
+will take precedence between internal and external css
+*for first file to be executed early use !important in that particular palce before semicolon
+
+-->
+
+</html>
