@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Blaka+Hollow&display=swap" rel="stylesheet">
+
+    <style>
+        p {
+            font-family: 'Blaka Hollow', cursive;
+            font-size: 40px;
+            /* font-size: 250%; */
+            /* font-size: 5ch; */
+            /* font-size: 5em; */
+            /* font-size:10pc; */
+            /*
+... and there are much more units but "px" is preferred */
+
+            line-height: 3em;
+            /* it is distance between lines 
+            em -> x times the size of parent */
+
+        }
+
+        span {
+            font-weight: bold;
+            /* or we can directly give values
+            bold is same as 700 */
+        }
+
+        /* here we see a lot of font family 
+1) Web safe fonts - fonts bydefault present in PC
+2) Web fonts - present on web
+
+Font stag - more fonts provided separated by commas,
+in case first font not match other will follow
+
+to use "Web fonts", search google fonts (a very good site)
+and select a font and then click on the plus icon and 
+copy the style sheet for it and then link it to our html
+and also copy the font family
+
+we can also set "font-size" -> 1px(pixel) = 1/96 inch
+
+*/
+    </style>
+
+</head>
+
+<body>
+    <p>Playing with <span>fonts</span></p>
+</body>
+
+</html>
