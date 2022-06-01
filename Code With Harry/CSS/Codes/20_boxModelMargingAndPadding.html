@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model, Marging and Padding</title>
+    <style>
+        /* '*' is a universal selector */
+        * {
+            box-sizing: border-box;
+            /*by applying this
+            width of border will not change*/
+
+        /* setting margin and padding here will make it 
+            work as default for all until it is overwrite
+            manually later */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: burlywood;
+            border: 3px solid rgb(25, 236, 173);
+
+            /*Method 1*/
+            /* padding: 9px; */
+            /* since padding is inside border. so,
+            the thing inside border shifts by given size */
+            /* margin: 10px; */
+            /* it is the space outside the box */
+
+            /*Method 2*/
+            /* we can also give padding and margin from one
+            any one side */
+            /* padding-left: 9px;
+            margin-bottom: 10px; */
+
+            /*Method 3*/
+            /* padding/margin = top right bottom left; 
+            TRBL shortcut for learning*/
+            /* padding: 23px 34px 45px 56px;
+            margin: 5px 6px 7px 8px; */
+
+            /* Method 4 */
+        /* we can also give padding/margin in pair of two
+        padding/margin: y(top/bottom) x(left/right); */
+            padding: 34px 19px;
+            margin: 10px 15px;
+            border-radius: 23px;
+            width: 300px;
+        }
+
+        body{
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>This is my heading</h2>
+        <p id="first">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo necessitatibus eos hic doloribus!
+            Quasi reprehenderit asperiores quaerat error veritatis maiores alias non maxime?</p>
+    </div>
+
+    <div class="container">
+        <h2>This is my heading</h2>
+        <p id="second">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo necessitatibus eos hic doloribus!
+            Quasi reprehenderit asperiores quaerat error veritatis maiores alias non maxime?</p>
+    </div>
+
+    <div class="container">
+        <h2>This is my heading</h2>
+        <p id="third">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo necessitatibus eos hic doloribus!
+            Quasi reprehenderit asperiores quaerat error veritatis maiores alias non maxime?</p>
+    </div>
+</body>
+
+</html>
