@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Menu</title>
+    <style>
+        .navbar {
+            background-color: red;
+            border-radius: 30px;
+        }
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            /*to remove bullets or 
+            numbering*/
+
+            margin: 13px 20px;
+        }
+
+        /* here we don't see any background color because 
+        when we float something it will overfloat from 
+        its parent
+        to overcome this we use overflow: auto; */
+
+        .navbar ul {
+            overflow: auto;
+        }
+
+        .navbar li a {
+            padding: 3px 3px;
+            text-decoration: none;
+            /*to remove underline*/
+        }
+
+        .navbar li a:hover {
+            color: skyblue;
+        }
+
+        .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a> </li>
+                <li><a href="#">About</a> </li>
+                <li><a href="#">Services</a> </li>
+                <li><a href="#">Contact us</a></li>
+                <!-- '#' means nothing is present in the 
+                source of anchor tag -->
+
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="search this website">
+                    <!-- placeholder is text shown by default
+                    on search box -->
+                </div>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

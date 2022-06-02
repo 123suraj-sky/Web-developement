@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alignment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Blaka+Hollow&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Blaka Hollow', cursive;
+        }
+
+        .container {
+            width: 900px;
+            border: 3px solid purple;
+            margin: 33px auto;
+            /*auto makes element to center*/
+            background-color: rgb(238, 206, 178);
+        }
+
+        .item {
+            border: 3px solid grey;
+            margin: 12px 3px;
+            padding: 12px 3px;
+            background: rgb(238, 214, 214);
+        }
+
+        #fruits {
+            float: left;
+            width: 48%;
+        }
+
+        /* float shifts the items to given position */
+
+        #computer {
+            float: right;
+            width: 48%;
+        }
+
+        #stationary {
+            /* float: left;
+            if we remove float from here it will overlap
+            to overcome this we use 'clear' */
+
+            /* clear: left; */
+            /* 'clear: left' means no float: left element
+            is allowed stationary */
+
+            clear: both; /* both from left and right of 
+            float is not allowed */
+            
+            width: 99.3%;
+        }
+
+        p, h2{
+            /* text-align: left;
+            text-align: right; 
+            text-align: center; */
+            text-align: justify;
+        }
+
+        h1{
+            margin: 23px auto;
+            width: 355px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to my Store</h1>
+        <div id="fruits" class="item">
+            <h2>Fruits</h2>
+            <p id="fruitspara" class="para">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum error cupiditate iste voluptas
+                architecto, eos animi, sequi debitis ad iure doloremque. Debitis voluptates adipisci ratione libero
+                eveniet deserunt, quaerat magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis at odit nihil doloremque sapiente tenetur atque placeat illum soluta, optio quia maxime accusantium sunt corrupti minima! Distinctio magni ullam sit ea modi et earum.
+            </p>
+        </div>
+        <div id="computer" class="item">
+            <h2>computer</h2>
+            <p id="computerpara" class="para">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum error cupiditate iste voluptas
+                architecto, eos animi, sequi debitis ad iure doloremque. Debitis voluptates adipisci ratione libero
+                eveniet deserunt, quaerat magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ex, non voluptatem, rerum, pariatur eaque magni nemo hic nostrum delectus soluta impedit illum dolorum libero doloribus! Aliquid alias similique, obcaecati dicta tempore ab numquam!
+            </p>
+        </div>
+        <div id="stationary" class="item">
+            <h2>stationary</h2>
+            <p id="stationarypara" class="para">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum error cupiditate iste voluptas
+                architecto, eos animi, sequi debitis ad iure doloremque. Debitis voluptates adipisci ratione libero
+                eveniet deserunt, quaerat magni!
+            </p>
+        </div>
+        <div id="glasses" class="item">
+            <h2>glasses</h2>
+            <p id="glassespara" class="para">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum error cupiditate iste voluptas
+                architecto, eos animi, sequi debitis ad iure doloremque. Debitis voluptates adipisci ratione libero
+                eveniet deserunt, quaerat magni!
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
