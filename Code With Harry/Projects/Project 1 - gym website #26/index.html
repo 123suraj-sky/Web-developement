@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SKY's Fitness Gym</title>
 </head>
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <style>
     /* CSS Reset */
     body {
+        font-family: 'Baloo Bhai', cursive;
         color: white;
         margin: 0px;
         padding: 0px;
@@ -23,14 +25,27 @@
         border: 2px solid red;
         display: inline-block;
         position: absolute;
-        left: 34px;
-        top: 20px;
+        left: 20px;
+        top: 7px;
+    }
+
+    .left img {
+        width: 66px;
+        /* filter: invert(100%); */
+        /*this will make white 
+        image to black and black image to white*/
+    }
+
+    .left div {
+        text-align: center;
+        line-height: 22px;
+        font-size: 26px;
     }
 
     .mid {
         border: 2px solid green;
         display: block;
-        width: 33%;
+        width: 40%;
         margin: 20px auto;
 
     }
@@ -55,7 +70,37 @@
     .navbar li a {
         color: white;
         text-decoration: none;
-        padding: 34px 23px;
+        padding: 24px 12px;
+    }
+
+    .navbar li a:hover,
+    .navbar li a.active {
+        text-decoration: underline;
+        color: grey;
+    }
+
+    .btn {
+        font-family: 'Baloo Bhai', cursive;
+        margin: 0px 9px;
+        background-color: black;
+        color: white;
+        padding: 4px 14px;
+        border: 2px solid grey;
+        border-radius: 10px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: rgb(34, 34, 34);
+    }
+
+    .container {
+        border: 2px solid white;
+        margin: 190px 258px;
+        padding: 16px 61px;
+        width: 9%;
+        border-radius: 50px;
     }
 </style>
 
@@ -63,7 +108,10 @@
     <header class="header">
         <!-- left box for logo -->
         <div class="left">
-            This is left only for setting positon
+            <div class="left">
+                <img src="dumbbell.jpg" alt="Logo">
+                <div>SKY's Fitness</div>
+            </div>
 
         </div>
 
@@ -71,7 +119,7 @@
         <div class="mid">
             <!-- this is mid only for setting positon -->
             <ul class="navbar">
-                <li> <a href="#"> Home</a></li>
+                <li> <a href="#" class="active"> Home</a></li>
                 <li> <a href="#"> About Us</a></li>
                 <li> <a href="#"> Fitness Calculator</a></li>
                 <li> <a href="#"> Contact Us</a></li>
@@ -81,8 +129,14 @@
         <!-- right box for buttons -->
         <div class="right">
             <!-- this is right only for setting positon -->
+            <button class="btn">Call Us Now</button>
+            <button class="btn">Email Us</button>
         </div>
     </header>
+
+    <div class="container">
+        this is a container
+    </div>
 </body>
 
 </html>
