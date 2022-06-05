@@ -1,0 +1,113 @@
+/* CSS Reset */
+body {
+    font-family: 'Baloo Bhai', cursive;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    background: url('/abs.jpg');
+    /* above is the way to include image as 
+    background */
+}
+
+.left {
+    /* border: 2px solid red; */
+    display: inline-block;
+    position: absolute;
+    left: 20px;
+    top: 7px;
+}
+
+.left img {
+    width: 66px;
+    /* filter: invert(100%); */
+    /*this will make white 
+    image to black and black image to white*/
+}
+
+.left div {
+    text-align: center;
+    line-height: 22px;
+    font-size: 26px;
+}
+
+.mid {
+    /* border: 2px solid green; */
+    display: block;
+    width: 40%;
+    margin: 20px auto;
+
+}
+
+.right {
+    /* border: 2px solid yellow; */
+    display: inline-block;
+    position: absolute;
+    right: 34px;
+    top: 20px;
+}
+
+.navbar {
+    display: inline-block;
+}
+
+.navbar li {
+    display: inline-block;
+    font-size: 20px;
+}
+
+.navbar li a {
+    color: white;
+    text-decoration: none;
+    padding: 24px 12px;
+}
+
+.navbar li a:hover {
+    text-decoration: underline;
+    color: grey;
+}
+
+.btn {
+    font-family: 'Baloo Bhai', cursive;
+    margin: 0px 9px;
+    background-color: black;
+    color: white;
+    padding: 4px 14px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(34, 34, 34);
+}
+
+.container {
+    border: 2px solid white;
+    margin: 190px 258px;
+    padding: 16px 61px;
+    width: 39%;
+    border-radius: 50px;
+}
+
+.formGroup input {
+    font-family: 'Baloo Bhai', cursive;
+    text-align: center;
+    display: block;
+    width: 440px;
+    padding: 5px;
+    margin: 8px auto;
+    border: 2px solid blue;
+    border-radius: 10px;
+    font-size: 27px;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.container button {
+    display: block;
+    width: 450px;
+    margin: 20px auto;
+}
