@@ -22,7 +22,7 @@
     }
 
     .left {
-        border: 2px solid red;
+        /* border: 2px solid red; */
         display: inline-block;
         position: absolute;
         left: 20px;
@@ -43,7 +43,7 @@
     }
 
     .mid {
-        border: 2px solid green;
+        /* border: 2px solid green; */
         display: block;
         width: 40%;
         margin: 20px auto;
@@ -51,7 +51,7 @@
     }
 
     .right {
-        border: 2px solid yellow;
+        /* border: 2px solid yellow; */
         display: inline-block;
         position: absolute;
         right: 34px;
@@ -73,8 +73,7 @@
         padding: 24px 12px;
     }
 
-    .navbar li a:hover,
-    .navbar li a.active {
+    .navbar li a:hover {
         text-decoration: underline;
         color: grey;
     }
@@ -99,8 +98,30 @@
         border: 2px solid white;
         margin: 190px 258px;
         padding: 16px 61px;
-        width: 9%;
+        width: 39%;
         border-radius: 50px;
+    }
+
+    .formGroup input {
+        font-family: 'Baloo Bhai', cursive;
+        text-align: center;
+        display: block;
+        width: 440px;
+        padding: 5px;
+        margin: 8px auto;
+        border: 2px solid blue;
+        border-radius: 10px;
+        font-size: 27px;
+    }
+
+    .container h1 {
+        text-align: center;
+    }
+
+    .container button {
+        display: block;
+        width: 450px;
+        margin: 20px auto;
     }
 </style>
 
@@ -119,7 +140,7 @@
         <div class="mid">
             <!-- this is mid only for setting positon -->
             <ul class="navbar">
-                <li> <a href="#" class="active"> Home</a></li>
+                <li> <a href="#"> Home</a></li>
                 <li> <a href="#"> About Us</a></li>
                 <li> <a href="#"> Fitness Calculator</a></li>
                 <li> <a href="#"> Contact Us</a></li>
@@ -135,7 +156,28 @@
     </header>
 
     <div class="container">
-        this is a container
+        <h1>Join the best gym of Varanasi now</h1>
+        <form action="noaction.php">
+            <div class="formGroup">
+                <input type="text" name="" placeholder="Enter your Name: ">
+            </div>
+            <div class="formGroup">
+                <input type="text" name="" placeholder="Enter your Age: ">
+            </div>
+            <div class="formGroup">
+                <input type="text" name="" placeholder="Enter your Gender: ">
+            </div>
+            <div class="formGroup">
+                <input type="text" name="" placeholder="Enter your Locality: ">
+            </div>
+            <div class="formGroup">
+                <input type="text" name="" placeholder="Enter your Email Id: ">
+            </div>
+            <div class="formGroup">
+                <input type="text" name="" placeholder="Enter your Phone Number: ">
+            </div>
+            <button class="btn">Submit</button>
+        </form>
     </div>
 </body>
 
