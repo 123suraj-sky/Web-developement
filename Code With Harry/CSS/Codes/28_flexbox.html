@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container {
+            height: 544px;
+            width: 100%;
+            border: 2px solid black;
+
+            /* initialize the container as a flex box */
+            display: flex;
+
+            /* Flex properties for flex container */
+
+            /* 1) flex-direction is by default row */
+            /* flex-direction: row; */
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+            /* flex-direction: row-reverse; */
+
+            /* 2) flex-wrap is by default no-wrap */
+            /* flex-wrap: wrap; */
+            /* flex-wrap: wrap-reverse; */
+
+            /* 3) to give flex-direction and flex-wrap 
+            simultanuasly we use flex-flow*/
+            flex-flow: row wrap;
+
+            /* 4) justify-content places the flex box 
+            itmes to the center if set it center*/
+            justify-content: center;
+            justify-content: space-between;
+            /*gives equal
+             spacing b/w two boxes*/
+            justify-content: space-evenly;
+            /*gives equal
+             spacing b/w two boxes as well as b/w 
+             starting and end*/
+            justify-content: space-around;
+            /*gives equal
+             spacing around a box from left and right
+             sides*/
+
+            /* 5) to change positons vertically */
+            align-items: center;
+            /*this will make the 
+             items vertically center*/
+            align-items: flex-end;
+            /*this will make the 
+             items vertically downward*/
+            align-items: flex-start;
+            /*this will make the 
+             items vertically upward
+             It is by default*/
+            align-items: stretch;
+            /*it gives vertically 
+             equal spaces*/
+
+
+        }
+
+        .item {
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+            border: 2px solid red;
+            margin: 10px;
+            padding: 3px;
+        }
+
+        /* Flex properties for flex container */
+        #item1 {
+            /* order: 2; */
+            /* flex-grow: 2; */
+            /* flex-shrink: 2; */
+            flex-basis: 120px;
+        }
+
+        #item2 {
+            /* order: 3; */
+            /* flex-grow: 3; */
+            /* flex-shrink: 3; */
+            flex-basis: 240px;
+        }
+
+        #item3 {
+            /* order: 1; */
+            /* flex-grow: 1; */
+            /* flex-shrink: 1; */
+            /* flex-basis: 360px; */
+            flex: 2 2 344px;
+            align-self: flex-end;
+            align-self: flex-start;
+            align-self: center;
+        }
+
+        /* 1) item whose order is maximum will be placed
+         at last
+         
+        2) space taken by boxed will be in flex-grow 
+         order
+         For Eg. here item1, item2, item3 will grow in size
+          in the orde 2:3:1 if it gets space
+         -> here -ve numbers is invalid
+         
+        3) to use flex-grow in reverse manner we use
+        flex-shrink
+        
+        4) to change the size of items we use flex-basis
+        -> when flex-direction is set to row flex-basis
+        controls width
+        -> when flex-direction is set to column flex-basis
+        controls height
+
+        Note: direction is set in container
+
+        5) flex: flex-grow flex-shrink flex-basis;
+        we can also give these above three values in 1 
+        as shown above
+
+        6) for the position of items we use align-self
+            align-self: flex-end; -> will put the item to
+                the end of the box
+            align-self: flex-start; -> will put the item 
+                to the start of the box
+            -> it is a by default value
+            align-center: center; -> will put the item to 
+                center
+        */
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item" id="item1">First box</div>
+        <div class="item" id="item2">Second box</div>
+        <div class="item" id="item3">Third box</div>
+        <div class="item" id="item4">Fourth box</div>
+        <div class="item" id="item5">Fifth box</div>
+        <div class="item" id="item6">Sixth box</div>
+    </div>
+</body>
+
+</html>
