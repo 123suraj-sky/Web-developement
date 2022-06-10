@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Selectors</title>
+    <style>
+        h1 {
+            background-color: burlywood;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* to select all paragraphs inside div */
+        /* div p{
+            color: blue;
+            background-color: blanchedalmond;
+            font-weight: bold;
+        } */
+
+        /* div li p{
+            color: green;
+            background-color: rgb(208, 228, 236);
+            font-weight: bold;
+        } */
+
+        /* only applicable for direct child of p */
+        div>p {
+            color: blue;
+            background-color: blanchedalmond;
+            font-weight: bold;
+        }
+
+        /* only applicable for those paragraph whose 
+        previous sibling is div */
+        div+p {
+            color: black;
+            background-color: rgb(240, 123, 123);
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is more on selectors</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="item">
+                    <p>this is
+                        another paragraph
+                    </p>
+                </li>
+            </ul>
+            <p>this is a paragraph</p>
+        </div>
+        <p>this is another paragraph</p>
+    </div>
+    <p>this is outermost paragraph</p>
+</body>
+
+</html>
