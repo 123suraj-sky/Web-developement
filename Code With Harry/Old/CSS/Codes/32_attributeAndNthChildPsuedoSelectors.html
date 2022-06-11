@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute And Nth Child Psuedo Selectors</title>
+    <style>
+        input {
+            display: block;
+        }
+
+        .container {
+            display: block;
+            width: 233px;
+            margin: auto;
+        }
+
+        /* Pseudo Selector
+        1) Also set by targeting an attribute of an 
+        element */
+        input[type='text'] {
+            padding: 23px;
+            border: 2px solid red;
+        }
+
+        /* 2.1) selecting only those anchor tags whose 
+        target(any) is set */
+        a[target] {
+            font-size: 34px;
+            color: violet;
+        }
+
+        /* 2.2) selecting specific target in anchor tag */
+        a[target='_self'] {
+            font-size: 44px;
+            color: rgb(241, 62, 31);
+        }
+
+        /* 2.3) also applicable for others */
+        input[type='email'] {
+            color: yellowgreen;
+            border: 2px solid black;
+        }
+
+        /* 3) Nth pseudo child 
+        This will apply CSS for 3rd child of li in this 
+        case*/
+        li:nth-child(3) {
+            color: teal;
+        }
+
+        /* 3.1) selecting every 2nd element
+        where (2n+0) works similar as AP, starts with 
+        n = 0 */
+        li:nth-child(2n+0) {
+            color: crimson;
+        }
+
+        /* 3.2) selecting only odd child */
+        li:nth-child(odd) {
+            background-color: yellow;
+        }
+
+        /* 3.3) selecting only even child */
+        li:nth-child(even) {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1><a href="http://www.google.com" target="_blank">Go to Google</a></h1>
+        <h1><a href="http://www.facebook.com" target="_self">Go to Facebook</a></h1>
+        <form action="" class="formControl">
+            <input type="text" placeholder="Enter your name">
+            <input type="password" placeholder="Enter your password">
+            <input type="email" placeholder="Enter your email">
+            <input type="submit" value="submit">
+        </form>
+        <ul>
+            <li class="item" id="item1">Item1</li>
+            <li class="item" id="item2">Item2</li>
+            <li class="item" id="item3">Item3</li>
+            <li class="item" id="item4">Item4</li>
+            <li class="item" id="item5">Item5</li>
+            <li class="item" id="item6">Item6</li>
+            <li class="item" id="item7">Item7</li>
+            <li class="item" id="item8">Item8</li>
+            <li class="item" id="item9">Item9</li>
+            <li class="item" id="item10">Item10</li>
+        </ul>
+    </div>
+</body>
+
+</html>
