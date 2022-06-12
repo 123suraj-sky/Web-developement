@@ -1,12 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Before And After Psuedo Selectors</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            margin: 23px 243px;
+            align-items: center;
+            /* border: 2px solid red; */
+            height: 344px;
+            justify-content: center;
+        }
+
+        .navigation {
+            display: flex;
+            font-size: 20px;
+        }
+
+        li {
+            list-style: none;
+            padding: 15px 23px;
+        }
+
+        /* to insert any thing before something 
+        But It is not recommended to use it like this */
+        section::before {
+            content: "this is a before content";
+        }
+
+        /* to insert any thing after something 
+        But It is not recommended to use it like this */
+        section::after {
+            content: "this is a after content";
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        header::before{
+            content: "";
+            background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center/cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item">Home</li>
+                <li class="item">About</li>
+                <li class="item">Services</li>
+                <li class="item">Contact Us</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1>Welcome to Coding World</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quo cum doloremque explicabo corrupti
+            corporis reprehenderit quae unde in, doloribus deserunt libero veritatis tempore nisi id. Voluptate
+            assumenda deleniti excepturi necessitatibus, numquam natus error!</p>
+    </section>
 </body>
+
 </html>
