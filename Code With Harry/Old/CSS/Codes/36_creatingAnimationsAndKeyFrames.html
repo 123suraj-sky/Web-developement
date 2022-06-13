@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Animations and Keyframes</title>
+    <style>
+        .container {
+            background-color: greenyellow;
+        }
+
+        .box {
+            background-color: green;
+            width: 250px;
+            height: 250px;
+            position: relative;
+
+            animation-name: harry1;
+            animation-name: harry2;
+            /*Name of animation*/
+            animation-duration: 2s;
+            /*Duration of 
+            animation*/
+            animation-iteration-count: infinite;
+            animation-iteration-count: 1;
+            /*how many 
+            times the animation should run.
+            We can also give any number inplace of 
+            infinite*/
+
+            /* animation-fill-mode: forwards; */
+            /*if we want 
+            the properties of "to" in keyframes to remain 
+            */
+            /* animation-fill-mode: alternate; */
+            /*if we want 
+            the properties of "to" in keyframes to end
+            */
+            /* animation-timing-function: ease-in; */
+            /*intial 
+            speed is slow and then its speed increases
+            
+            similarly others are "ease-out", 
+            "ease-in-out"*/
+
+            /* animation-delay: 3s; */
+            /*delay in showing 
+            animation properties*/
+
+            /* animation-direction: reverse; */
+            /*there are 
+            many other directions avaialble*/
+
+            /* We can also write animation in 1 line
+
+            animation: animation-name animation-duration animation-timing-function animation-dealy animation-iteration-count animation-fill-mode; */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: harry1 5s ease-in 1s infinite backwards;
+        }
+
+        /* initializing animation via its name and 
+        keyframes */
+        @keyframes harry1 {
+            from {
+                width: 200px;
+            }
+
+            to {
+
+                width: 1400px;
+            }
+
+            /* in place of from and to we can also use 0% 
+            to 100% */
+        }
+
+        @keyframes harry2 {
+            0% {
+                top: 0px;
+                left: 0px;
+            }
+
+            25% {
+                top: 250px;
+                left: 0px;
+            }
+
+            50% {
+                top: 250px;
+                left: 250px;
+            }
+
+            75% {
+                top: 0px;
+                left: 250px;
+            }
+
+            /* any percentage can be given */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">This is a box</div>
+    </div>
+</body>
+
+</html>

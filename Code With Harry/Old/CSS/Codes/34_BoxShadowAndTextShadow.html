@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow And Text Shadow</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .card {
+            padding: 23px 12px;
+            margin: 23px 12px;
+            /* border: 2px solid red; */
+            background-color: burlywood;
+
+            /* box shadow */
+            box-shadow: 10px 13px green;
+            /*here values 
+            can also be given in -ve*/
+            /* box-shadow: offset-x offset-y color; */
+
+            /* we can also give blur radius in box-shadow 
+            after 2 values 
+            blur radius -> how much the box shadow is 
+            blurred*/
+            box-shadow: 10px 12px 13px green;
+            /* box-shadow: offset-x offset-y blur-radius color; */
+
+            /* after that we can also give spread radius 
+            spread radius -> how much the box shadow to 
+            be spread */
+            box-shadow: 10px 12px 13px 15px green;
+            /* box-shadow: offset-x offset-y blur-radius spread-radius color; */
+
+            /* we can also give color as follows:
+            write "rgba" for that */
+            box-shadow: 10px 12px 13px 15px rgba(100, 200, 300, 0.5);
+            /* where alpha at last will tell the darkness 
+            of the color */
+
+            /* For box shadow inside the box we use inset 
+            with box-shadow */
+            box-shadow: inset 10px 20px green;
+
+            /* For giving more than 1 box shadow at a 
+            time we can give it by separating it by 
+            commas */
+            box-shadow: 3px 5px green, 8px 10px red;
+        }
+
+        .card h1{
+            /* Text shadow */
+            text-shadow: 3px 4px red;
+            /* above options of box shadow will also work 
+            here expect for the "inset" one*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" id="card1">
+            <h1>Card 1</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero nisi laudantium officiis natus
+                cupiditate debitis aperiam, excepturi architecto dolorem modi totam dicta aut voluptatem quasi enim
+                nostrum ipsum? Dicta delectus excepturi vel deleniti quod!</p>
+        </div>
+        <div class="card" id="card2">
+            <h1>Card 2</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero nisi laudantium officiis natus
+                cupiditate debitis aperiam, excepturi architecto dolorem modi totam dicta aut voluptatem quasi enim
+                nostrum ipsum? Dicta delectus excepturi vel deleniti quod!</p>
+        </div>
+        <div class="card" id="card3">
+            <h1>Card 3</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero nisi laudantium officiis natus
+                cupiditate debitis aperiam, excepturi architecto dolorem modi totam dicta aut voluptatem quasi enim
+                nostrum ipsum? Dicta delectus excepturi vel deleniti quod!</p>
+        </div>
+    </div>
+</body>
+
+</html>

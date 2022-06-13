@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable And Custom Properties</title>
+    <style>
+        :root{
+            --primary-color: rgb(56, 117, 230);
+            --danger-color: red;
+            --maxw: 733px; /*max width*/
+        }
+
+        .box{
+            /* --box-color: blue;  */
+            /*we can create variable 
+            starting with "--property" 
+            If we change property here then it will be 
+            reflected at all places where it is placed
+            
+            It's scope is only in between this curly 
+            brackets (similar to local variables).
+
+            If we create variables in root it will be 
+            available for all (similar to global variable)
+            */
+
+            width: 200px;
+            height: 200px;
+            background-color: var(--primary-color); /*For 
+            assigning variable we have to use var
+            (--property)*/
+            box-shadow: 3px 3px 3px var(--primary-color);
+            border: 2px solid var(--danger-color);
+            margin: 2px 9px;
+        }
+
+        .container{
+            display: flex;
+            background-color: var(--danger-color);
+            align-items: center;
+            justify-content: center;
+            max-width: var(--maxw);
+            margin: auto;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

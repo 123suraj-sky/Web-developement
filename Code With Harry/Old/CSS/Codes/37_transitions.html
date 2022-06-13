@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+        body{
+            background-color: black;
+        }
+
+        /* we can add transition to that properties which 
+        have continous values */
+        #box {
+            display: flex;
+            height: 200px;
+            width: 200px;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(253, 72, 72);
+
+            /* transition-property: background-color; */
+            /* We also have to specify which property we 
+            want to change */
+
+            /* transition-duration: 1s; */
+            /* If we don't set transition time it will 
+            change color at instant. */
+
+            /* transition-timing-function: ease-in; */
+            /* similar to animation-timing-function */
+
+            /* transition-delay: 2s; */
+
+            /* transition: transition-property transition-duration transition-timing-function transition-delay; */
+
+            /* transition: background-color 1s ease-in 2s; */
+            transition: all 1s ease-in 1s; /*all means 
+            transition is applied to all properites*/
+        }
+
+        #box:hover {
+            background-color: white;
+            height: 400px;
+            width: 400px;
+            border-radius: 10px;
+            font-size: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>This s CSS Transition Tutorial</h3>
+    <div class="container">
+        <div id="box">
+            This is my box
+        </div>
+    </div>
+
+</body>
+
+</html>
