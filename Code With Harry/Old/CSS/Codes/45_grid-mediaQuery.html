@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid - Media Query</title>
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section aside'
+                'footer footer footer footer';
+        }
+
+        /* Initialising media query */
+        @media only screen and (max-width:300px) {
+            body {
+                background-color: yellow;
+            }
+
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+            }
+
+            aside {
+                display: none;
+            }
+
+            span {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        @media only screen and (min-width: 300px) and (max-width:500px) {
+            body {
+                background-color: red;
+            }
+
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+            }
+
+            aside {
+                display: none;
+            }
+
+            span {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        @media only screen and (min-width: 500px) and (max-width:800px) {
+            body {
+                background-color: blue;
+            }
+
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+            }
+
+            span {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        @media only screen and (min-width: 800px) {
+            body {
+                background-color: green;
+            }
+
+        }
+
+        .borderNow {
+            border: 2px solid black;
+            padding: 10px 23px;
+            background-color: wheat;
+        }
+
+        navbar {
+            grid-area: navbar;
+        }
+
+        section {
+            grid-area: section;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        footer {
+            grid-area: footer;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="borderNow">
+            <span>Home</span>
+            <span>About</span>
+            <span>Services</span>
+            <span>Contact</span>
+        </nav>
+        <section class="borderNow">
+            <h2>Learn CSS in hindi</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto dolorem necessitatibus cum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis fugiat fuga exercitationem. Cupiditate totam quae optio error velit esse, alias tempora tenetur voluptatibus recusandae. Animi velit sit repudiandae, fugiat alias accusamus, quas maiores placeat minima modi nostrum dolore illum quidem sed vitae nam! Commodi eius illo expedita laudantium cum vero, accusantium hic at natus culpa nobis mollitia et, necessitatibus, similique aperiam blanditiis omnis fuga tenetur labore! Magnam accusamus, nisi repellendus laboriosam ratione modi recusandae porro beatae harum ipsum corporis numquam accusantium cumque, doloribus vel perspiciatis quod est tempore quisquam inventore placeat minima iure. Aliquam, ut? Iure corrupti quasi odio ratione.</p>
+        </section>
+        <aside class="borderNow">
+            <h1>More About Us</h1>
+        </aside>
+    </div>
+
+    <footer class="borderNow">Copyright &copy; CodeWithHarry 2022</footer>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Age in Dog Years</title>
+
+    <script type="text/javascript">
+        function cYears(form) {
+            form.dogAge.value = form.myAge.value * 7
+        }
+    </script>
+</head>
+
+<body>
+    <strong>Find out your age in dog years!</strong>
+    <p>Note: 1 year = 7 dog years</p>
+
+    <form method="post">
+        <table>
+            <tr>
+                <td>Enter your age:</td>
+                <td><input type="text" name="myAge" size=15></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="button" value="calculate" onclick="cYears(this.form)">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Your age in Dog Years is:</td>
+                <td><input type="text" name="dogAge" size=15></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>

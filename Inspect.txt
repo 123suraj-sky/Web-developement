@@ -1,0 +1,3 @@
+Shortcut to open Inspect:
+1) "F12" --> Best way
+2) Ctrl + Shift + i

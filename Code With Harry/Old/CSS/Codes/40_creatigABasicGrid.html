@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a Basic Grid</title>
+    <style>
+        .container {
+            /*Initilization of grid
+            -> from this everything inside grid becomes 
+            items of grid*/
+            display: grid;
+
+            /* grid-template-columns: 300px 100px 100px; */
+            /*It means make three columns of width given*/
+
+            /* grid-template-columns: 300px auto auto; */
+            /* First column get 300px and rest 2nd and 
+            3rd columns get auto i.e. equal space form 
+            remaining spaces*/
+
+            /* grid-template-columns: 1fr 4fr 1fr; */
+            /* Divide columns in 3 part in the ratio of 
+            1:4:1
+            "fr" means fraction */
+
+            /* for making many column of same width */
+            grid-template-columns: repeat(10, auto);
+            /* we can also give size in place of auto 
+            Note: don't put space after repeat b/c it is 
+            a function*/
+
+            grid-gap: 2rem;
+            /*adds space between items in a columns.
+            works in similar fashion as margin*/
+
+        }
+
+        .item {
+            /* height: 100px; */
+            /* width: 100px; */
+            background-color: red;
+            /* margin: 3px; */
+            padding: 15px 3px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">This is Item 1</div>
+        <div class="item">This is Item 2</div>
+        <div class="item">This is Item 3</div>
+        <div class="item">This is Item 4</div>
+        <div class="item">This is Item 5</div>
+        <div class="item">This is Item 6</div>
+        <div class="item">This is Item 7</div>
+        <div class="item">This is Item 8</div>
+        <div class="item">This is Item 9</div>
+        <div class="item">This is Item 10</div>
+        <div class="item">This is Item 1</div>
+        <div class="item">This is Item 2</div>
+        <div class="item">This is Item 3</div>
+        <div class="item">This is Item 4</div>
+        <div class="item">This is Item 5</div>
+        <div class="item">This is Item 6</div>
+        <div class="item">This is Item 7</div>
+        <div class="item">This is Item 8</div>
+        <div class="item">This is Item 9</div>
+        <div class="item">This is Item 10</div>
+    </div>
+</body>
+
+</html>
