@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings and its methods in JavaScript</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Lorem ipsum dolor sit.</h1>
+        <div id="content">
+
+        </div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo dicta quisquam, sapiente molestiae dolorum
+            aliquam. Odit repudiandae aliquam rerum unde dolor ipsum, eos nihil cum, suscipit id quibusdam mollitia
+            praesentium animi cumque, totam iste.</p>
+    </div>
+
+    <script>
+        // var string = "thi's";
+        var string = 'thi"s';
+        var name = 'Harry';
+        var message = 'Harry is a good boy';
+        var channel = "CodeWithHarry"
+        var temp = `${name} is a 'nice' "boy" and he has a channel called "${channel}"`;
+        // We can use both "" & '' inside ``.
+        // Here we can also use another string using $ 
+        // symbol.
+
+        // console.log(string);
+        // console.log(string + name + message); // this 
+        // will contacinate the strings
+        console.log(temp);
+
+        // We can also calculate length of the string
+        var len = name.length;
+        console.log(`Lengh of name is ${len}`);
+
+        console.log("Hello World\nHello"); // same as in C
+        console.log("Hello World\tHello"); // same as in C
+        console.log("Hello World\bHello"); // same as in C
+        console.log("Hello World\\Hello"); // same as in C
+
+        // Method 2 of string declaration -> 
+        // String Constructor
+        var y = new String("this"); // Here 'S' should be 
+        // in capital letters
+        console.log(y);
+
+        document.getElementById('content').innerHTML = '<h3> this is an h3 heading</h3>';
+
+
+        /*
+        Strings can be delcared by both "" & ''.
+        We use "", when we have to write '' as text, 
+        otherwise it will give an error.
+        We use '', when we have to write "" as text, 
+        otherwise it will give an error.
+        */
+    </script>
+</body>
+
+</html>
