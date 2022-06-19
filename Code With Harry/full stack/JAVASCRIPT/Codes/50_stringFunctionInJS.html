@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Function in JavaScript</title>
+</head>
+
+<body>
+    <script>
+        var str = "This is a string";
+        console.log(str);
+
+        // Position of any part of string
+        var position = str.indexOf('is');
+        console.log(position);//We get "is" after 't', 'h'
+        // gives first occurence of a substring
+
+        position = str.lastIndexOf("is");
+        console.log(position);
+        // gives last occurence of a substring
+
+        // Priniting substring of a string
+        // var substr1 = str.slice(1, 6);
+        // var substr1 = str.substring(1, 6);
+        var substr1 = str.substr(1, 6);
+        console.log(substr1);
+        // prints character from start to end-1
+        // slice can take -ve values while substring does
+        // not take -ve values.
+        /* "substr" starts from start position and exract 
+        that number of characters which are given next of 
+        start */
+        console.log(str[3]);
+
+        // Replace a string 
+        var replaced = str.replace('string', 'Harry');
+        console.log(replaced);
+        // old string will remain unchanged, new string   
+        // is created in place of that
+
+        // Convert to uppercase characters
+        console.log(str.toUpperCase());
+
+        // Convert to lowercase characters
+        console.log(str.toLowerCase());
+
+        // Concatination of string
+        var newString = str.concat(" New string");
+        console.log(newString);
+        // we can also use "+" in place of concat
+
+        // Trim whitespaces
+        var strWithWhiteSpaces = "   this   containes   whitesapces         ";
+        console.log(strWithWhiteSpaces.trim()); /* It 
+        will remove all white spaces form start and end*/
+        console.log(strWithWhiteSpaces);
+
+        // Extracting a character from a string
+        var char1 = str.charAt(2);
+        var char2 = str.charCodeAt(2); // gives character code in UTF-8 or 16? Check.
+        console.log(char1);
+        console.log(char2);
+
+
+    </script>
+</body>
+
+</html>

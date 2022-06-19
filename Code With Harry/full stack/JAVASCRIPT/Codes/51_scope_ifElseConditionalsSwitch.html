@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope, If-else Conditionals & Switch Case</title>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>Item1</li>
+            <li>Item2</li>
+            <li>Item3</li>
+            <li>Item4</li>
+            <li>Item5</li>
+            <li>Item6</li>
+            <li>Item7</li>
+        </ul>
+    </div>
+    <script>
+        var string1 = "This is a string";
+        var string1 = "This is a strin2";
+        console.log(string1);
+        /*Even if we redeclare a variable it shows no 
+        error it just updates the new value
+    
+        Because, scope of "var" is global
+        
+        To overcome this problem we declare variable with 
+        "let" Because, scope of "let" is block level
+        */
+
+        let a = "u";
+        // let a = "u6";
+        /* It will throw an error b/c a 
+        is already declared*/
+        {
+            let a = "u6"; // but we can declare variable 
+            // of same name like this is a block
+            console.log(a);
+        }
+        console.log(a);
+
+
+        // Constants
+        const b = "This cannot be changed";
+        // b = "Changed! This cannot be changed";
+        // Above line will throw error as "b" is constant
+        console.log(b);
+
+
+        // Conditionals
+        // If - else
+        let age = 233;
+        if (age > 18) {
+            console.log("You can drink water");
+        }
+        else if (age == 2) {
+            console.log("Age is 2");
+        }
+        else if (age == 5) {
+            console.log("Age is 5");
+        }
+        else {
+            console.log("You can drink cold drink");
+        }
+
+        // Switch
+        const cups = 1;
+        switch (cups) { // here cups can also be a string
+            case 4:
+                console.log("The value of cup is 4");
+                break;
+            case 41:
+                console.log("The value of cup is 41");
+                break;
+            case 42:
+                console.log("The value of cup is 42");
+                break;
+            case 43:
+                console.log("The value of cup is 43");
+                break;        
+            default:
+                console.log("It is 45");
+                break;
+        }
+    </script>
+</body>
+
+</html>

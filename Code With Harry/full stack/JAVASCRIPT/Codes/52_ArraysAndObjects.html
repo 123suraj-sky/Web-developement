@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Objects</title>
+</head>
+
+<body>
+    <h1>Quries:</h1>
+    <p>Why Sorting of an array is not working properly</p>
+
+    <!--? Quries:
+    Why Sorting of an array is not working properly -->
+    <div>
+        <ul>
+            <li>Item1</li>
+            <li>Item2</li>
+            <li>Item3</li>
+            <li>Item4</li>
+            <li>Item5</li>
+            <li>Item6</li>
+            <li>Item7</li>
+        </ul>
+    </div>
+
+    <script>
+        // Primitive variables
+        let myVar = 34;
+        let myVar2 = "string";
+        let myVar3 = true;
+        let myVar4 = null;
+        let myVar5 = undefined;
+        /* Default value of any variable is undefined
+        Eg. let var;
+        Its by default value if undefined
+        */
+        console.log(myVar);
+        console.log(myVar2);
+        console.log(myVar3);
+        console.log(myVar4);
+        console.log(myVar5);
+
+        // Objective variables
+        // it will have key value pairs.
+        // anything other than primitive is objective
+        let employee = {
+            name: "Harry",
+            salary: 19,
+            channel: "CodeWithHarry",
+            channel2: "ProgrammingWithHarry",
+
+            /* If we want to use spaces is declaration, 
+            we use "" 
+            And to print this we cannot use '.' notation, we must use ['channel 3'] 
+            
+            Here "name", "salary", "channel", "channel2" 
+            are known as "key" and values given to it.
+            So it is k/a "key value pairs". */
+            "channel 3": "new channel",
+
+        }
+        console.log(employee);
+        console.log(employee.channel);
+        console.log(employee.channel2);
+        console.log(employee['channel2']);
+        console.log(employee['channel 3']);
+
+
+        // Arrays --> It is also an object
+        // Method 1
+        let names = [41, 12, 33, "SkY", undefined];
+        console.log(names);
+        console.log(names[0]); // prints 0th index
+        console.log(names[1]); // prints 1st index
+
+        // Method 2
+        let names1 = new Array(41, 23, 4, "SkY", undefined);
+        // Here "A" should be capital
+        // It will make object from array ("new" keyword 
+        // must be used for it).
+        console.log(names1);
+
+        // To get length of an array
+        console.log(names1.length);
+
+        // Sorting an Array
+        names1 = names1.sort();
+        console.log(names1);
+
+        // Adding an element at the end
+        names.push("This is pushed");
+        console.log(names);
+
+        // Creating elemetns of 'n' empty elements
+        let names2 = new Array(23);
+        // It will create an array of 23 empty elements
+        console.log(names2);
+
+    </script>
+</body>
+
+</html>
