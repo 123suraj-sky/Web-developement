@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+
+<body>
+    <div>This is body part</div>
+    <script>
+        console.log("This is tutorial 55");
+
+        // "for loop" --> usually used to iterate arrays
+        for (let i = 0; i < 3; i++) {
+            console.log(i);
+        }
+
+        let friends = ["Rohan", "Sanjeev", "Deepti", "Pooja", "SkillF"];
+        for (let index = 0; index < friends.length; index++) {
+            console.log("Hello friend, " + friends[index]);
+        }
+
+        // we can also do above task using "for each loop"
+        // modern JS method
+        friends.forEach(function f(element) {
+            console.log("Hello Friend, " + element + " to modern JS using for each loop");
+        });
+
+        // using "for of loop"
+        for (element of friends) {
+            console.log("Hello Friend, " + element + " to modern JS using for of loop");
+        }
+
+        // itertion of keys of objects -> we use "for in loop"
+        let employee = {
+            name: "Harry",
+            salary: 3,
+            channel: "CWH"
+        }
+
+        for (key in employee) {
+            console.log(`The ${key} of employee is ${employee[key]}`);
+        }
+
+        // "while loop"
+        let i = 0;
+        while (i < 4) {
+            console.log(`${i} is less than 4`);
+            i++;
+        }
+
+        // "do while loop"
+        let j = 34;
+        do {
+            console.log(`${j} is less than 4 and we are inside do while loop`);
+            j++;
+        } while (j < 4);
+
+
+    </script>
+</body>
+
+</html>

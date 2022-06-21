@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating DOM</title>
+</head>
+
+<body>
+    <div id="main" class="container">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About us</li>
+            <li>Servies</li>
+            <li>More About Us</li>
+            <li>Contact Us</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        Another Container
+    </div>
+    <script>
+        let main = document.getElementById('main');
+        console.log(main);
+        
+        let nav = document.getElementById('nav');
+        console.log(nav);
+        
+        // changing HTML from JS
+        // nav.innerHTML = "<li> new </li>";
+        
+        let containers = document.getElementsByClassName('container');
+        console.log(containers);
+        // we can also print similar to arrays
+        console.log(containers[0]);
+        console.log(containers[1]);
+
+        // CSS Selectors
+        let sel1 = document.querySelector('.container');
+        // querySelector returns first element of selected items
+        console.log("First Selector returns ", sel1);
+        console.log("Selector returns "+ sel1);
+
+        let sel2 = document.querySelector('#nav');
+        console.log("Second Selector returns ", sel2);
+
+        let sel3 = document.querySelector('#nav>li');
+        console.log("Third Selector returns ", sel3);
+        
+        // querySelectorAll returns all element of selected items
+        let sel4 = document.querySelectorAll('#nav>li');
+        console.log("Fourth Selector returns ", sel4);
+        // changing a particular value of selected items
+        sel4[0].innerHTML = "New Text";
+        console.log(sel4[0].innerHTML);
+        
+
+    </script>
+</body>
+
+</html>

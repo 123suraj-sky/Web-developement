@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and Listening to Events</title>
+</head>
+<style>
+    #btn {
+        padding: 10px 14px;
+        color: red;
+        border: 2px solid black;
+        font-weight: bold;
+        background-color: rgb(152, 236, 236);
+        border-radius: 20px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    This is container
+    <!-- Browser events:
+    click
+    contextmenu
+    mouseover/mouseout
+    mousedown/mouseup
+    mousemove
+
+    submit
+    focus
+
+    DOMCotentLoaded
+
+    transitionend -->
+    <div class="container">
+        <h1>This is my heading</h1>
+        <p id="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae nam corrupti unde odit amet debitis
+            magnam
+            porro illum? Aliquam vel quisquam rerum, tenetur necessitatibus rem beatae quod atque aspernatur quos ipsum
+            laborum quas? Quis libero nulla cum perferendis ipsa cupiditate, assumenda ex vel nihil eaque magni ad odio
+            harum rem quas. Et, repudiandae nihil porro sint ratione fugiat delectus quibusdam aliquid inventore
+            asperiores placeat qui eveniet magni dignissimos quae error laudantium facere accusamus obcaecati beatae
+            ipsum. Vero iusto nesciunt sed modi non ut perspiciatis pariatur sunt, minus hic illum debitis nemo est
+            suscipit excepturi, facere, ad fugit mollitia. Eius magnam non voluptate perspiciatis qui aliquid fugiat ad
+            nemo. Nesciunt dolores consequuntur omnis ratione dolor quae! Obcaecati expedita maiores nesciunt hic ipsa
+            corporis repellendus quaerat rem a ea, natus eum ad nemo. Fuga eveniet labore id placeat. Placeat nam eaque
+            dolor nostrum neque aspernatur totam aliquam, ea magni quo suscipit ad impedit reprehenderit dignissimos,
+            doloremque sit consequuntur. Debitis veritatis nulla asperiores, voluptatum facere illo doloribus sunt,
+            quibusdam accusamus voluptatibus nesciunt impedit nostrum earum! Ratione eum, impedit necessitatibus labore
+            illum, pariatur explicabo, distinctio quibusdam animi vitae eos nobis cum qui? Modi doloribus nam iste,
+            incidunt aliquid, quasi nesciunt nulla tenetur illo facere distinctio fugit facilis aliquam autem magnam
+            eius officia illum soluta cumque porro laborum? Deserunt dolor fugiat placeat? Amet eveniet, aperiam, velit
+            fugit in dolor excepturi vitae deleniti voluptate accusantium corrupti enim quaerat. Asperiores consequuntur
+            sit, modi, nam cupiditate itaque blanditiis facilis earum perspiciatis quos, suscipit aperiam. Provident
+            fugit odit dignissimos! A nesciunt dignissimos dicta velit eligendi, fugiat asperiores sunt id omnis
+            consectetur soluta, voluptate ab ratione dolor unde sit aspernatur ut ad sequi aliquam quam architecto in
+            libero eum! Molestiae, veritatis explicabo nemo velit reprehenderit adipisci a maiores! Deleniti ad quam
+            labore itaque, eos numquam rem consectetur cumque explicabo ratione accusantium saepe, corrupti sint
+            necessitatibus ut incidunt facilis quia animi exercitationem quis ea deserunt dolore. Obcaecati dolorum et
+            repellendus ipsum eveniet excepturi, quam perspiciatis nam voluptates aperiam culpa. Earum quasi eos ipsum
+            odio!</p>
+    </div>
+    <button id="btn" onclick="toggleHide()">Show/Hide</button>
+    <!-- we cannot use any "" or '' inside onclick or 
+        anything similar to that -->
+
+    <script>
+        let para = document.getElementById("para");
+        para.addEventListener("mouseover", function run() {
+            console.log("Mouse Inside");
+        });
+        para.addEventListener("mouseout", function run() {
+            console.log("Mouse Outside");
+        });
+
+
+        function toggleHide() {
+            // let btn = document.getElementById("btn");
+            // let para = document.getElementById("para");
+            /*
+            In modern browsers, variable is directly 
+            point to the id or class name same with it
+            */
+
+            if (para.style.display != "none") {
+                para.style.display = "none";
+            }
+            else {
+                para.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>

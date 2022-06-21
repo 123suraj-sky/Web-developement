@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaction using Alert, Prompt and Confirm</title>
+</head>
+
+<body>
+    <div class="container">
+        This is a page
+    </div>
+    <script>
+        // Alert in in-browser JS
+        // alert("This is a message");
+        // sends a pop-up message
+        // It does not return anything -> return value is undefined
+
+        // Prompt
+        // let name = prompt("What is your name?", "");
+        // let name = prompt("What is your name?");
+        // let name = prompt("What is your name?", "Guest");
+        // here first is for message and second is for default
+        // it is not necessary to give default argument
+        // by default, default argument is null
+        /* but atleast give the "" so that all browser 
+        support it (as some browser must require default 
+        field) */
+        /* when user enter something it is stored in the 
+        name variable */
+        // console.log(name);
+
+        // Confirm
+        // let deletePost = confirm("Do you really want to delete this post?");
+        // // console.log(deletePost);
+        // if (deletePost) {
+        //     console.log("Your post has been deleted successfully");
+        // }
+        // else {
+        //     console.log("Your post has not been deleted");
+        // }
+
+
+        // Solution to question in video
+        // Question: Ask user its age, if greater than 18 
+        // years then allow to the site otherwise not.
+        let enterPage = prompt("Enter your age", "");
+        if (enterPage >= 18) {
+            console.log("Welcome to the page");
+        }
+        else {
+            console.log("You must be 18 years or older to view this page");
+        }
+    </script>
+</body>
+
+</html>
