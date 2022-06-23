@@ -1,0 +1,79 @@
+<!--? Query
+What is lexical this -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+
+<body>
+    <div class="container">
+        This is a container
+    </div>
+
+    <script>
+        // function greet() {
+        //     console.log("Good Morning");
+        // }
+
+        // We can write above function using "arrow function"
+        greet = () => {
+            console.log("Good Morning");
+        }
+        greet();
+
+        setTimeout(() => { /*It is not necessary 
+            to write let here but it is a good practice 
+            to write it*/
+            console.log("We are inside stetimeout");
+        }, 2000);
+
+        // let sum = (a, b) => {
+        //     return a + b;
+        // };
+
+        // We can also write above function as follows:
+        let sum = (a, b) => a + b;
+        console.log(sum(1, 2));
+
+        // if there is only 1 argument there is not need to put brackets
+        let half = a => a / 2;
+        console.log(half(2));
+
+        // if there is no argument we must have to put brackets
+        let newGreet = () => console.log("Good Morning");
+        newGreet();
+
+        // arrow function in objects
+        let obj1 = {
+            greeting: "Good Morning",
+            names: ["Harry", "Rohan", "SkillF", "DjKhiladi"],
+            speak() {
+                this.names.forEach((student) => {
+                    // console.log("Hello " + student);
+
+                    console.log(this.greeting + "Hello " + student);
+                    /*here arrow function can search for 
+                    greetings inside its parent (here it 
+                    is obj1)
+                    
+                    This is the property of arrow 
+                    function, it will not work if we use 
+                    ordinary function. In normal function 
+                    declaration this function search for 
+                    greeting inside speak function*/
+                });
+                // "this" is used to access anything from an object
+            }
+        }
+        obj1.speak();
+    </script>
+
+</body>
+
+</html>

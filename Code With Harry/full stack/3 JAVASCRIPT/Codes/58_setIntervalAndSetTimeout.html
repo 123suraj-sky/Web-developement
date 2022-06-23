@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval and SetTimeOut</title>
+</head>
+
+<body>
+    <div class="container">
+        Time now is <span id="time"></span>
+    </div>
+
+    <script>
+        /* setTimeout -> Allows us to run the function once after the interval of time */
+        /* clearTimeout -> Allows us to run the function repeatedly after the interval of time */
+
+        function greet() {
+            console.log("Hello Good Morning");
+        }
+        function greet1(name, byeText) {
+            console.log("Hello Good Morning " + name + " " + byeText);
+        }
+        setTimeout(greet, 2000); // time in ms
+        setTimeout(greet1, 2000, "Sky", "Take Care");
+        // give third argument for function argument.
+        // Do not give paraenthesis otherwise it will be 
+        // same as calling function
+        
+        timeOut = setTimeout(greet1, 2000, "Sky", "Take Care");
+        // as setTimeout returns a timer id, so we can 
+        // use to cancel the timer if required
+        console.log(timeOut);
+        
+        clearTimeout(timeOut); // to clear set time for a call
+        /*Since we have clearTimeout the timer of 
+        setTimeout, so even after given time (2000ms) 
+        nothing will happen*/
+        
+        setInterval(greet, 1000);
+        intervalId = setInterval(greet1, 2000, "Sky", "Gdn8");
+        // setInterval also returns the timer id
+        clearTimeout(intervalId);
+
+        function displayTime() {
+            time = new Date();
+            console.log(time);
+            document.getElementById("time").innerHTML = time;
+        }
+        setInterval(displayTime, 1000);
+        
+    </script>
+</body>
+
+</html>

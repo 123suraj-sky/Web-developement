@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time</title>
+    <style>
+        .container {
+            font-size: 23px;
+            background-color: blanchedalmond;
+            border: 2px solid gray;
+            padding: 34px;
+            margin: 4px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        #time {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        This is a container
+        <br>
+        Time now is <span id="time"></span>
+
+    </div>
+
+    <script>
+        let now = new Date();
+        // object date made via constructor "now" equivalent to "new Date()"
+        console.log(now);
+
+        // Initial/base/reference time
+        let dt = new Date(0); /*it tells the starting 
+        time, to get time after certain fixed interval we 
+        can give that time in "ms" in place of 0*/
+        console.log(dt);
+
+        // Printing a predefined time
+        // Method 1
+        let newDate = new Date("2029-09-30");
+        console.log(newDate);
+
+        // Method 2
+        // let newDate1 = new Date(year, month, date, hours, minutes, seconds, miliseconds);
+        let newDate1 = new Date(3020, 4, 6, 9, 3, 2, 34);
+        console.log(newDate1);
+
+        // Printing year, months, days, ... separately
+        let yr = newDate1.getFullYear();
+        console.log("This year is", yr);
+        // automatic space after is
+        console.log("This year is " + yr);
+        // manual space after is
+
+        let mon = newDate1.getMonth();
+        console.log("This month is", mon);
+
+        let date = newDate1.getDate();
+        console.log("This date is", date);
+
+        let hr = newDate1.getHours();
+        console.log("This hour is", hr);
+
+        let mi = newDate1.getMinutes();
+        console.log("This minute is", mi);
+
+        let sec = newDate1.getSeconds();
+        console.log("This second is", sec);
+
+        let ms = newDate1.getMilliseconds();
+        console.log("This mili second is", ms);
+
+        let dy = newDate1.getDay();
+        console.log("This day is", dy);
+
+        // we can also change year, months, ...
+        newDate1.setDate(15);
+        /* if we give date more 
+        than 28, 29, 30 or 31 depending upon month it 
+        will automatically move to the next month to the 
+        number of days */
+        console.log(newDate1);
+
+        // print number of ms passed from the reference time
+        console.log(Date.now());
+        // we can use this to calculate the time for a function to execute
+
+        // making clock
+        setInterval(updateTime, 1000);
+
+        function updateTime() {
+            time.innerHTML = new Date();
+        }
+    </script>
+</body>
+
+</html>
