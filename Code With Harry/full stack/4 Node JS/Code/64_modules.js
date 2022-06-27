@@ -9,6 +9,9 @@ const fs = require("fs");
 // const text = fs.readFileSync("64_read.txt", "utf-8");
 
 let text = fs.readFileSync("64_read.txt", "utf-8");
+// Here sync means synchronous.
+// It means program will not further continue till this 
+// line is executed.
 text = text.replace("Backend", "newBackend");
 console.log("The content of the file is:");
 console.log(text);

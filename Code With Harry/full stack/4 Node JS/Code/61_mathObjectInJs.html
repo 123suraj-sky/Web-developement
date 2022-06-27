@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object in JS</title>
+</head>
+
+<body>
+    <div class="container">
+        This is a container
+    </div>
+
+    <script>
+        let m = Math; // 'M' should be capital
+        console.log(m); // on printing this we see all math functions
+
+        // printing constants from math objects
+        console.log("The value of Math.E is ", Math.E);
+        console.log("The value of Math.PI is ", Math.PI);
+        console.log("The value of Math.LN2 is ", Math.LN2);
+        console.log("The value of Math.LN10 is ", Math.LN10);
+        console.log("The value of Math.LOG10E is ", Math.LOG10E);
+        console.log("The value of Math.LOG2E is ", Math.LOG2E);
+        console.log("The value of Math.SQRT1_2 is ", Math.SQRT1_2);
+        console.log("The value of Math.SQRT2 is ", Math.SQRT2);
+
+        // Functions from math object
+        let a = 34.64534;
+        let b = 89.1;
+
+        // 1) Rounding a value
+        console.log("The value of a and b is", Math.round(a), Math.round(b));
+
+        // 2) Power of a number -> "pow" function
+        console.log("3 raised to the power of 2 is", Math.pow(3, 2));
+
+        // 3) "sqrt" function
+        console.log("Square root of 7 is", Math.sqrt(7));
+
+        // 4) "floor" and "ceil" function
+        // "floor" -> Greatest Integer Function (G.I.F)
+        // "ceil" -> Least Integer Function
+        console.log("5.8 rounded up to nearest integer is ", Math.ceil(5.8));
+        console.log("5.8 rounded down to nearest integer is ", Math.floor(5.8));
+
+        // 5) absolute function -> modulus value
+        console.log("Absolute value of 5.8 is", Math.abs(-5.879));
+        console.log("Absolute value of 5.8 is", Math.abs(5.879));
+
+        // 6) Trigonometric function
+        console.log("The value of sin(pi) is", Math.sin(Math.PI));
+        console.log("The value of sin(pi/2) is", Math.sin(Math.PI / 2));
+        console.log("The value of tan(pi) is", Math.tan(Math.PI));
+
+        // 7) min max function
+        console.log("Minimum value of 4, 5, 6 is", Math.min(4, 5, 6, 10, -1));
+        console.log("Maximum value of 4, 5, 6 is", Math.max(4, 5, 6, 10, -1));
+
+        // 8) Generating a random number
+        // by default random function generates a random number b/w 0 and 1
+        let r = Math.random();
+        console.log("The random number is", r);
+        // generating a random number b/w a and b
+        a = 1;
+        b = 100;
+        let r1_100 = a + (b - a) * Math.random();
+        console.log("The random number is", r1_100);
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,2 @@
+If the Js code is not running, then goto that directory 
+and then try to run that Js file.
