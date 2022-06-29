@@ -1,0 +1,14 @@
+{
+  "name": "69_npm",
+  "version": "1.0.0",
+  "description": "This is a good tutorial for beginners",
+  "main": "69_npm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "awesome"
+  ],
+  "author": "sky",
+  "license": "ISC"
+}

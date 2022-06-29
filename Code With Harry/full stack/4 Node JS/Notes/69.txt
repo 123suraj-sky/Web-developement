@@ -1,0 +1,3 @@
+1) to get npm version type: npm --version
+
+2) to get node version type: node --version in terminal
