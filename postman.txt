@@ -1,0 +1,6 @@
+How to run postman on win7 32bit
+
+1) install postman agent app
+2) open chrome and postman web app
+3) select agent as auto-select or set as desktop-agent
+4) enjoy postman
