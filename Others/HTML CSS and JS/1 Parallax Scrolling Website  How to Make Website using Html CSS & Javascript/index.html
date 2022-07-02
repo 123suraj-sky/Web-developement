@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Website</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li>
+                <a href="#" class="active">Home</a>
+                <a href="#">About</a>
+                <a href="#">Work</a>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <section>
+        <!-- <img src="../ImgSource/stars.png" class="images" alt="Star Background Image1"> -->
+        <!--? Why above code for inserting image is not working when file is in other directory  -->
+        <img src="./images/stars.png" id="stars" alt="Star Image">
+        <img src="./images/moon.png" id="moon" alt="Star Image">
+        <img src="./images/mountains_behind.png" id="mountains_behind" alt="Mountain Behind Image">
+        <h2 id="text">Moon Light</h2>
+        <a href="#" id="btn">Explore</a>
+        <img src="./images/mountains_front.png" id="mountains_front" alt="Mountain Front Image">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At qui eaque, enim repellendus quasi commodi! Quo
+            quaerat adipisci sit odio enim possimus architecto dignissimos cupiditate impedit, dolor aperiam,
+            consectetur sapiente. Ducimus alias culpa aut <br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit at, similique eius dolor porro delectus
+            praesentium cumque et distinctio corporis deleniti debitis dolorum. Necessitatibus possimus laudantium
+            quisquam dolorum obcaecati iste velit voluptatum explicabo consequuntur aliquam quos autem nulla nostrum
+            <br> vero alias expedita doloremque, ipsa quo eaque non inventore nobis consequatur! Velit possimus mollitia
+            dicta dolor molestiae voluptatum modi esse explicabo iste eveniet, praesentium incidunt perferendis nesciunt
+            maxime temporibus facilis aliquam corrupti eum voluptas. Quam tempore deleniti quibusdam atque, architecto
+            doloribus voluptates, quidem ut totam porro neque eaque perspiciatis repellendus eveniet aliquid. Doloremque
+            qui totam veritatis illo, tenetur <br>aliquid nisi ad. Delectus unde cum ipsam dolorem facilis expedita rem
+            velit, ipsa quis officia cupiditate, aperiam voluptatibus pariatur mollitia consectetur aspernatur quisquam
+            temporibus dignissimos laborum tenetur nihil eaque praesentium. Maxime cum modi alias. Possimus, laudantium.
+            Assumenda at sed quod nulla tempore accusantium quaerat sapiente repellendus laudantium reprehenderit error
+            voluptates cupiditate a repellat fuga fugit porro, <br>consequatur non exercitationem, ullam molestias
+            excepturi? Inventore culpa optio voluptate cum omnis quis laborum nihil quae sint architecto nam,
+            reprehenderit magnam totam dolores dolorem. Sapiente, consequuntur pariatur. Recusandae, deserunt magnam sed
+            nemo iusto nihil exercitationem suscipit eveniet? Iusto voluptatem quos ad porro ipsa, nam voluptas commodi
+            nisi ea? Accusamus inventore commodi, iusto, non neque nobis aspernatur illo temporibus ducimus obcaecati
+            quaerat fugiat nesciunt eveniet aut, repellendus soluta unde placeat quos cum quae nulla ratione. Alias
+            officiis provident quod ad culpa dolorum exercitationem vel nisi, id soluta necessitatibus? Unde maxime
+            distinctio esse nulla, suscipit placeat temporibus voluptates <br>tempora accusantium commodi, iusto
+            assumenda nostrum eligendi atque repellat! Modi omnis nisi magnam impedit optio dolorum animi perferendis
+            eveniet quasi quibusdam facere beatae minus cumque doloremque asperiores obcaecati voluptates, eum placeat
+            ad adipisci earum amet ea nulla. Ipsa fugit ullam, officiis consectetur veniam delectus! Sint sunt
+            perferendis vero temporibus ullam eos culpa velit pariatur quidem. Ratione id impedit vero maxime fuga,
+            totam qui consequatur voluptates, illo consequuntur nobis iure a tempore cupiditate illum at ullam dolor, ex
+            sint? Fugiat quaerat officia distinctio nostrum nihil consectetur neque obcaecati enim aperiam accusantium
+            porro cupiditate nulla tempore nobis similique eaque ipsam maiores repellat, cum aliquid quod vitae magni
+            dolore ratione? Ex odio autem minus id quos commodi pariatur provident nesciunt. Voluptatibus mollitia
+            excepturi dolorum doloribus eaque <br>distinctio? Ab nesciunt aspernatur omnis ducimus, eveniet officiis
+            cumque quos nobis magnam illo tempora eius id delectus cum est error facilis pariatur velit placeat quaerat
+            atque eum! Eligendi velit nulla alias, placeat distinctio id. Expedita nesciunt dolorum et sequi ipsam
+            suscipit voluptatem aliquam, voluptatum, quis delectus, maiores neque numquam vitae iusto omnis sint
+            repellat? Iure maxime explicabo obcaecati numquam id ipsam suscipit autem velit? Exercitationem quos eveniet
+            quam beatae magnam reprehenderit deleniti atque, corrupti ullam illum. Porro delectus at, voluptates
+            molestiae quod natus soluta eligendi! Repellendus inventore, similique a quaerat veniam aut <br>cupiditate
+            reprehenderit. Dolores laboriosam nemo, ducimus tenetur voluptas quis, corporis mollitia numquam vitae alias
+            magni omnis sequi illum suscipit eaque dignissimos officia minus sed a possimus. Iusto optio ratione impedit
+            vero repellendus voluptatum, minus nihil necessitatibus? </p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+        })
+    </script>
+</body>
+
+</html>
