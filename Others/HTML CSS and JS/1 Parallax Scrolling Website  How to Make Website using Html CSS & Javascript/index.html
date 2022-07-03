@@ -31,7 +31,8 @@
         <a href="#" id="btn">Explore</a>
         <img src="./images/mountains_front.png" id="mountains_front" alt="Mountain Front Image">
     </section>
-    <div class="sec" id="sec">
+    <div class="sec">
+    <!-- <div class="sec" id="sec"> -->
         <h2>Parallax Scrolling Effects</h2>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At qui eaque, enim repellendus quasi commodi! Quo
             quaerat adipisci sit odio enim possimus architecto dignissimos cupiditate impedit, dolor aperiam,
@@ -72,7 +73,8 @@
             molestiae quod natus soluta eligendi! Repellendus inventore, similique a quaerat veniam aut <br>cupiditate
             reprehenderit. Dolores laboriosam nemo, ducimus tenetur voluptas quis, corporis mollitia numquam vitae alias
             magni omnis sequi illum suscipit eaque dignissimos officia minus sed a possimus. Iusto optio ratione impedit
-            vero repellendus voluptatum, minus nihil necessitatibus? </p>
+            vero repellendus voluptatum, minus nihil necessitatibus?
+        </p>
     </div>
 
     <script>
@@ -82,10 +84,18 @@
         let text = document.getElementById('text');
         let btn = document.getElementById('btn');
         let mountains_front = document.getElementById('mountains_front');
+        let header = document.getElementById('header');
 
         window.addEventListener('scroll', function () {
             let value = window.scrollY;
             stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.05 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
         })
     </script>
 </body>

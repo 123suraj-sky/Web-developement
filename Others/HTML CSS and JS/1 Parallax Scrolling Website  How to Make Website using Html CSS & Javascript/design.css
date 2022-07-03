@@ -64,9 +64,10 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
-section::before{
+section::before {
     content: "";
     position: absolute;
     bottom: 0px;
@@ -100,6 +101,7 @@ section img#mountains_front {
     white-space: nowrap;
     font-size: 7.5vw;
     z-index: 9;
+    right: -350px;
 }
 
 #btn {

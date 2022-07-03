@@ -10,6 +10,27 @@ const express = require("express");
 
 const port = 80;
 const app = express();
+const path = require("path");
+
+//* for serving static files
+app.use('/static', express.static('static'));
+// here 'static' inside express.static(*) is folder name
+//notes: we can /static to access content of static folder
+
+//* Set the template engine as pug
+app.set('view engine', 'pug');
+// we have to include above line in app.js to use pug
+
+//* Set the views directory
+app.set('views', path.join(__dirname, 'views'));
+// here last views is the folder name
+
+//* Out pug demo endpoint
+app.get("/demo", (req, res) => {
+    res.status(200).render('demo', {title: 'Hey Sky', message: 'This is the first pug file'});
+    // here demo is file name
+});
+
 
 /* when user will send request to our server it will be 
 handled by this function */
