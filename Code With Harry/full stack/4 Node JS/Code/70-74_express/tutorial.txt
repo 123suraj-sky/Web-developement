@@ -1,0 +1,3 @@
+in app.js -> tut 70-72
+
+in newApp.js -> tut 73 - 74
