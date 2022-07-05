@@ -1,10 +1,30 @@
 doctype html
 html
     head 
+        title SKY Dance Academy
         style 
             include ../static/style.css 
     body 
-        h1 My Site 
-        p Hello World
+        nav#navbar 
+            ul 
+                li #[a(href="/") Home]
+                li #[a(href="/") About]
+                li #[a(href="/") Services]
+                li #[a(href="/") Class info]
+                li #[a(href="/") Contact Us]
+        
+        section#introSection 
+            div Welcome to SKY's Dance Academy
+            div.small Eat Sleep Dance Repeat
+
+        section#missionSection 
+            h2 Our Mission
+
+        section#sponsorsSection 
+            h2 Our sponsors
+
+        footer#footer 
+            | out footer here
+
         script 
             include ../static/index.js
