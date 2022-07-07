@@ -14,7 +14,9 @@ app.set('views', path.join(__dirname, 'views'));
 //* Endpoints
 app.get('/', (req, res) => {
     const params = {};
-    res.status(200).render('index.pug', params);
+    // res.status(200).render('index.pug', params);
+    // after we create home.pug using template we will serve that
+    res.status(200).render('home.pug', params);
 });
 
 //* Start The Server
