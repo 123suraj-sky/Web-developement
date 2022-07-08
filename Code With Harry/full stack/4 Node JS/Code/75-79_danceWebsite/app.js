@@ -19,6 +19,13 @@ app.get('/', (req, res) => {
     res.status(200).render('home.pug', params);
 });
 
+app.get('/contact', (req, res) => {
+    const params = {};
+    // res.status(200).render('index.pug', params);
+    // after we create home.pug using template we will serve that
+    res.status(200).render('contact.pug', params);
+});
+
 //* Start The Server
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
