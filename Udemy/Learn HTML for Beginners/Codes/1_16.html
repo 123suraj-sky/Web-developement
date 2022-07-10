@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page Description here">
+    <title>My First Web Page</title>
+
+    <style type="text/css">
+        body {
+            color: rgba(255, 0, 0, 0.725);
+        }
+    </style>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+    </script>
+</head>
+
+<body>
+    <p> This is a Sample HTML Document. </p>
+    <p>This Javascript function capitalize my name:</p>
+    <p>Enter your name:</p>
+    <input type="text" id="fname" onchange="myFunction()">
+
+    <p>This is line1. <br>This is line 2. &nbsp;&nbsp;&nbsp;&nbsp;This is line3</p>
+    <!-- nbsp is non-breakable spaces -->
+
+    <h1>Header 1</h1>
+    <h2>Header 2</h2>
+    <h3>Header 3</h3>
+    <h4>
+        <font face="arial" size="22" color="blue">Header 4</font>
+    </h4>
+    <h5>Header 5</h5>
+    <h6>Header 6</h6>
+
+    <p>
+        <strong> Bold Text</strong> <br>
+        <em> Italic Text</em> <br>
+        <u>Underlined Text</u> <br>
+        <strike>Strike Text</strike> <br>
+        <em><strong><u>Bold, Italic and Underlined Text</u></strong></em>
+    </p>
+
+    <h3>My Fvorite Sports</h3>
+    <!--* unordered list -->
+    <ul>
+        <li>Basketball</li>
+        <li>Soccer</li>
+        <li>Kabbdi</li>
+        <li>Football</li>
+    </ul>
+
+    <!--* ordered list -->
+    <ol>
+        <li>Basketball</li>
+        <li>Soccer</li>
+        <li>Kabbdi</li>
+        <li>Football</li>
+    </ol>
+
+    <!--* inserting images and links generation-->
+    <h1>Vacation Pictures</h1>
+    <p>
+        <a href="https://www.google.com"><img src="/FL.jpg" alt="Florida"></a>
+        <img src="/LV.jpg" alt="Las Vegas">
+        <img src="/NY.jpg" alt="New York">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Houston_night.jpg" alt="from wikipedia">
+        <a href="https://www.facebook.com"><p>Lorem ipsum dolor sit amet.</p></a>
+        <a href="https://www.facebook.com" target="_blank"><p>Lorem ipsum dolor sit amet.</p></a>
+        <!-- _blank opens in new tab -->
+    </p>
+
+    <!--* inserting videos -->
+    <video src="/ya.mp4" controls width="50%">
+        <!--if we controls from here use will no longer 
+        play/pause/... the video
+        
+        in case we not given control to user we have to 
+        write autoplay in place of controls otherwise the 
+        video is not being played-->
+        <!--note: autoplay does not work in mobile devices -->
+        Your browser does not support this video
+    </video>
+</body>
+
+</html>
