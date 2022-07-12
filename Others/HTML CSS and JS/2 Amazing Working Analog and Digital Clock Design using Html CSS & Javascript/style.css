@@ -45,7 +45,7 @@ body {
     margin-bottom: 30px;
 }
 
-.clock::before{
+.clock::before {
     content: "";
     position: absolute;
     width: 8px;
@@ -53,4 +53,49 @@ body {
     background: #2f363e;
     border: 3px solid #fff;
     border-radius: 50%;
+}
+
+.clock span {
+    position: absolute;
+    inset: 20px;
+    color: #fff;
+    text-align: center;
+    transform: rotate(calc(30deg * var(--i)));
+    /* 360/12 = 30deg */
+}
+
+.clock span strong {
+    font-size: 2em;
+    opacity: 0.25;
+    font-weight: 600;
+    display: inline-block;
+    transform: rotate(calc(-30deg * var(--i)));
+}
+
+.circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.circle em {
+    position: absolute;
+    width: 6px;
+    height: 50%;
+    background: var(--clr);
+}
+
+.circle2 {
+    width: 240px;
+    height: 240px;
+}
+
+.circle3 {
+    width: 180px;
+    height: 180px;
 }
