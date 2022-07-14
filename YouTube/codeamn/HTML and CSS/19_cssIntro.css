@@ -1,0 +1,31 @@
+/* * External CSS */
+h1 {
+    width: 200px;
+    height: 200px;
+    background: green;
+}
+
+aside {
+    /* color: rgb(235, 201, 201);
+    background: white; */
+    width: 150px;
+    height: 150px;
+    background: blue;
+    border-radius: 50%;
+
+}
+
+div {
+    /* background-color: antiquewhite; */
+    width: 250px;
+    height: 250px;
+    background: red;
+}
+
+.blue {
+    background-color: bisque;
+}
+
+#para{
+    background-color: aqua;
+}

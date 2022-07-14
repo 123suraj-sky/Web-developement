@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- *Analog Clock -->
     <div class="container">
         <div class="clock">
-
-            <div class="circle" style="--clr: #04fc43;"><em></em></div>
-            <div class="circle circle2" style="--clr: #fee800;"><em></em></div>
-            <div class="circle circle3" style="--clr: #ff2972;"><em></em></div>
+            <div class="circle" id="sc" style="--clr: #04fc43;"><em></em></div>
+            <div class="circle circle2" id="mn" style="--clr: #fee800;"><em></em></div>
+            <div class="circle circle3" id="hr" style="--clr: #ff2972;"><em></em></div>
 
             <span style="--i:1;"><strong>1</strong></span>
             <span style="--i:2;"><strong>2</strong></span>
@@ -28,6 +28,16 @@
             <span style="--i:11;"><strong>11</strong></span>
             <span style="--i:12;"><strong>12</strong></span>
         </div>
+
+        <!-- *Digital Clock -->
+        <div id="time">
+            <div id="hours" style="--clr:#ff2972;">00</div>
+            <div id="minutes" style="--clr:#fee800;">00</div>
+            <div id="seconds" style="--clr:#04fc43;">00</div>
+            <div id="ampm">AM</div>
+        </div>
     </div>
+
+    <script src="index.js"></script>
 </body>
 </html>
