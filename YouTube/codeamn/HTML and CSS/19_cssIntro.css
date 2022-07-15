@@ -26,6 +26,12 @@ div {
     background-color: bisque;
 }
 
-#para{
+#para {
     background-color: aqua;
+}
+
+span {
+    display: block;
+    /* we can also modify the property of tag from block 
+    to inline or vice versa */
 }

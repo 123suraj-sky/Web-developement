@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: pink;
+}
+
+.newnewlayout {
+    /** making flexbox */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* if overflow: exists then wrap the elements */
+}
+
+.first {
+    flex-shrink: 0;
+    /* flex-shrink: 0 means it will class "first" items 
+    will not shrink in any case */
+
+    flex-shrink: 1;
+}
+
+.second {
+    flex-shrink: 2;
+    /* after setting flex-shrink: 1 and 2 it means class 
+    "second" element shrink twice faster than class 
+    "first" element */
+}
+
+.newnewlayout div {
+    background-color: red;
+    width: 200px;
+    flex-basis: 300px;
+    /** flex-basis will become height and width of the 
+    flex box according to its direction column and row 
+    respectively*/
+    height: 50px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+#parent {
+    background-color: aqua;
+    height: 50vh;
+    /*viewport height*/
+    width: 100vw;
+    /*viewport width */
+
+    display: flex;
+    justify-content: center;
+    justify-content: flex-start;
+    /*flex start is by default*/
+    justify-content: flex-end;
+    /*flex-end pushes content on end of the main axis*/
+    align-items: center;
+    /* similar as justify-content */
+}
+
+#child {
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+}
