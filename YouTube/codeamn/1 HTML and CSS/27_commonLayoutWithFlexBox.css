@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+}
+
+body {
+    min-height: 200vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav, footer {
+    flex-shrink: 0;
+}
+
+section {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: burlywood;
+}
+
+section span {
+    /* position: absolute; */
+    /* absolute is position w.r.t its parent(of position 
+    relative) if parent exists, otherwise w.r.t screen*/
+
+    /* position: fixed; */
+    /* fixed will fix the position at a given point even 
+    if the page is scrolled w.r.t screen*/
+
+    position: sticky;
+
+    top: 0;
+    left: 0;
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+
+nav ul li {
+    padding: 10px;
+    margin: 2px;
+    list-style: none;
+}
+
+#logo {
+    width: 80vw;
+    height: 200px;
+    background-color: red;
+}
+
+.layer {
+    background-color: rgb(83, 183, 255);
+    width: 100%;
+    border-bottom: 2px solid gray;
+    padding: 10px 5px;
+    /** TRBL -  top right bottom left */
+}
