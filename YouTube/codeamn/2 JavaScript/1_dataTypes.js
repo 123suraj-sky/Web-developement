@@ -10,10 +10,10 @@ console.log(myFirstVariable);
 // var x = 5;
 // console.log(x);
 
-let a = 5;
-console.log(a);
-a = 6;
-console.log(a);
+let age = 5;
+console.log(age);
+age = 6;
+console.log(age);
 
 let myName = "sky";
 console.log(myName);
@@ -24,6 +24,7 @@ boolean = false;
 console.log(boolean);
 
 //* Array
+// in JS arrays are objects
 const friends = [22, true, "batman"];
 console.log(friends);
 
@@ -34,8 +35,9 @@ console.log(someSpecialValue1);
 const someSpecialValue2 = null;
 console.log(someSpecialValue2);
 // notes: null means the value should not exist
+// both arrays and null are objects
 
-
+//* big number
 let bigIntNumber = 1111111111111111111111111111111111;
 console.log(bigIntNumber);
 // arithmetic won't work with that big number
@@ -43,3 +45,8 @@ console.log(bigIntNumber);
 bigIntNumber = 1111111111111111111111111111111111n;
 console.log(bigIntNumber);
 console.log(typeof(bigIntNumber));
+
+
+//* typeof
+const typeofMyAge = (typeof age);
+console.log(typeofMyAge);
